@@ -11,6 +11,6 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 
 		PersonService personService = new PersonService();
-		personService.getAdultMaleUsersAverageBMI();;
+		personService.getAdultMaleUsersAverageBMI();
 	}
 }

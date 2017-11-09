@@ -3,9 +3,9 @@ package ru.rtech.interview.task2.service;
 /**
  * Created by bshestakov on 07.11.2017.
  */
-public class MailService {
+public class TelegramService {
 
     public void send(String title, String body) {
-        System.out.println("message is sent by mail. title: " + title + " body: " + body);
+        System.out.println("message is sent by telegram. title: " + title + " body: " + body);
     }
 }

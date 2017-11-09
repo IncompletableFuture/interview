@@ -23,7 +23,7 @@ public class PersonService {
         try {
 
 //            Class.forName("org.h2.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:hsqldb:mem:test", "SA", "");
+            Connection conn = DriverManager.getConnection("jdbc:hsqldb:mem:test", "admin", "qwerty$4");
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM person WHERE sex = 'male' AND age > 18");
             List<Person> adultPersons = new ArrayList<>();

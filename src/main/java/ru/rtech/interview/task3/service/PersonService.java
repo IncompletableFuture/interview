@@ -1,6 +1,6 @@
-package ru.rtech.interview.service;
+package ru.rtech.interview.task3.service;
 
-import ru.rtech.interview.domain.Person;
+import ru.rtech.interview.task3.domain.Person;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

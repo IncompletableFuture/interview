@@ -1,4 +1,4 @@
-package ru.rtech.interview.domain;
+package ru.rtech.interview.task3.domain;
 
 public class Person {
     private Long id;

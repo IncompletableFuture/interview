@@ -1,4 +1,4 @@
-package ru.rtech.interview.demo;
+package ru.rtech.interview.task3.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,8 +1,8 @@
-package ru.rtech.interview.task2.service;
+package ru.rtech.interview.task4.service;
 
 import org.junit.Test;
-import ru.rtech.interview.task2.domain.Data;
-import ru.rtech.interview.task2.domain.Report;
+import ru.rtech.interview.task4.domain.Data;
+import ru.rtech.interview.task4.domain.Report;
 
 import java.util.Arrays;
 

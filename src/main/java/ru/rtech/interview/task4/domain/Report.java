@@ -1,6 +1,4 @@
-package ru.rtech.interview.task2.domain;
-
-import java.math.BigDecimal;
+package ru.rtech.interview.task4.domain;
 
 /**
  * Created by bshestakov on 07.11.2017.

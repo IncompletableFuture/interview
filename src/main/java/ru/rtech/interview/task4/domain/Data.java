@@ -1,4 +1,4 @@
-package ru.rtech.interview.task2.domain;
+package ru.rtech.interview.task4.domain;
 
 import java.util.List;
 

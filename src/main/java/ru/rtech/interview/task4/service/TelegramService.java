@@ -1,4 +1,4 @@
-package ru.rtech.interview.task2.service;
+package ru.rtech.interview.task4.service;
 
 /**
  * Created by bshestakov on 07.11.2017.

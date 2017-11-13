@@ -1,8 +1,8 @@
-package ru.rtech.interview.service;
+package ru.rtech.interview.optionalsprinttask.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ru.rtech.interview.task3.domain.Person;
+import ru.rtech.interview.optionalsprinttask.domain.Person;
 
 
 @Configuration

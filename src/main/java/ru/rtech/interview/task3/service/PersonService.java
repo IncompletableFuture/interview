@@ -22,7 +22,6 @@ public class PersonService {
         long countOfPerson = 0;
         try {
 
-//            Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:hsqldb:mem:test", "admin", "qwerty$4");
             Statement statement = conn.createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM person WHERE sex = 'male' AND age > 18");
@@ -50,7 +49,6 @@ public class PersonService {
             e.printStackTrace();
         }
         System.out.println("Average imt - " + totalImt / countOfPerson);
-
     }
 
 }

@@ -26,8 +26,8 @@ public class Main {
                 .filter(elem -> elem.a == 1)
                 .collect(Collectors.toList());
         list2.get(0).a = 4;
+        
 //        ЧТО ВЫВЕДЕТ?
-
 //        System.out.println(list1);
 //        System.out.println(list2);
     }

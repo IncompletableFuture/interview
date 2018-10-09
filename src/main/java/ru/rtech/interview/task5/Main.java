@@ -10,7 +10,7 @@ public class Main {
     static class A {
         int a;
 
-        public A(int a) {
+        A(int a) {
             this.a = a;
         }
 
@@ -27,7 +27,7 @@ public class Main {
                 .collect(Collectors.toList());
         list2.get(0).a = 4;
 //        ЧТО ВЫВЕДЕТ?
-        
+
 //        System.out.println(list1);
 //        System.out.println(list2);
     }

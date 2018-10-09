@@ -20,15 +20,19 @@ public class Main {
         }
     }
 
+    /**
+     *     Всё компилится, запускается и отрабатывает без ошибок
+     *
+     *     ЧТО ВЫВЕДЕТ?
+     *
+     *     System.out.println(list1);
+     *     System.out.println(list2);
+     */
     public static void main(String[] args) {
         List<A> list1 = Arrays.asList(new A(1), new A(2));
         List<A> list2 = list1.stream()
                 .filter(elem -> elem.a == 1)
                 .collect(Collectors.toList());
         list2.get(0).a = 4;
-        
-//        ЧТО ВЫВЕДЕТ?
-//        System.out.println(list1);
-//        System.out.println(list2);
     }
 }

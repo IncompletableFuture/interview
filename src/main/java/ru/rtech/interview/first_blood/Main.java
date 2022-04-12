@@ -30,10 +30,10 @@ public class Main {
     /**
      * Возвращает всех людей старше 18 лет.
      *
-     * @param persons список групп людей
+     * @param groups список групп людей
      * @return список людей старше 18 лет
      */
-    public static List<Person> adultPersons(List<Group> persons) {
+    public static List<Person> adultPersons(List<Group> groups) {
         throw new UnsupportedOperationException("Implemented it!");
     }
 

@@ -11,21 +11,24 @@ import java.util.List;
 
 public class PersonService {
 
-
     /**
      * Возвращает средний индекс массы тела всех лиц мужского пола старше 18 лет
      *
      * @return
      */
-    public void getAdultMaleUsersAverageBMI() {
+    public void getAdultMaleClientsAverageBMI(long age) {
         double totalImt = 0.0;
         long countOfPerson = 0;
+        double heightInMeters = 0d;
+        double imt = 0d;
+        List<Person> adultPersons = new ArrayList<>();
         try {
-
-            Connection conn = DriverManager.getConnection("jdbc:hsqldb:mem:test", "admin", "qwerty$4");
-            Statement statement = conn.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM person WHERE sex = 'male' AND age > 18");
-            List<Person> adultPersons = new ArrayList<>();
+            Connection c = DriverManager.getConnection(
+                    "jdbc:postgresql://fit-client-db/prod",
+                    "admin",
+                    "qwerty$4");
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("SELECT * FROM person WHERE sex = 'male' AND age >= " + age);
             while (rs.next()) {
                 Person p = new Person();
                 //Retrieve by column name
@@ -38,17 +41,20 @@ public class PersonService {
                 adultPersons.add(p);
             }
 
+            countOfPerson = adultPersons.size();
+            System.out.println("Count of person: " + countOfPerson);
+
             for (Person p : adultPersons) {
-                double heightInMeters = p.getHeight() / 100d;
-                double imt = p.getWeight() / (Double) (heightInMeters * heightInMeters);
+                heightInMeters = p.getHeight() / 100d;
+                imt = p.getWeight() / (Double) (heightInMeters * heightInMeters);
                 totalImt += imt;
             }
-            countOfPerson = adultPersons.size();
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+        //We need to pass this string to Console, don't delete it plz
         System.out.println("Average imt - " + totalImt / countOfPerson);
     }
-
 }

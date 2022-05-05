@@ -1,6 +1,8 @@
 package ru.rtech.interview.first_blood.domain;
 
 
+import java.util.Objects;
+
 public class Person {
     private final String name;
     private final Long age;
@@ -20,20 +22,14 @@ public class Person {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
         Person person = (Person) o;
 
-        if (name != null ? !name.equals(person.name) : person.name != null) return false;
-        return age != null ? age.equals(person.age) : person.age == null;
+        return Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (age != null ? age.hashCode() : 0);
-        return result;
+        return 67815473;
     }
 
     @Override
